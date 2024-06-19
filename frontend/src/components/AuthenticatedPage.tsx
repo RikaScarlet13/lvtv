@@ -1,7 +1,7 @@
 // AuthenticatedPage.tsx
 import React from "react";
 import Header from "./Header";
-import { useAuth } from "../AuthContext";
+import { useAuth } from "../context/AuthContext";
 
 const AuthenticatedPage: React.FC = () => {
   const { isAuthenticated } = useAuth();

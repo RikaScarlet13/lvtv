@@ -1,7 +1,7 @@
 // PrivateRoute.tsx
 import React from "react";
 import { Route, Navigate } from "react-router-dom";
-import { useAuth } from "./AuthContext";
+import { useAuth } from "./context/AuthContext";
 
 interface PrivateRouteProps {
   path: string;

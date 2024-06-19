@@ -22,7 +22,7 @@ const Login = () => {
 
   return (
     <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID!}>
-      <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <div className="flex items-center justify-center  bg-gray-100">
         <GoogleLogin onSuccess={handleSuccess} onError={handleFailure} />
       </div>
     </GoogleOAuthProvider>
