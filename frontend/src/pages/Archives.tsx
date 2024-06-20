@@ -1,7 +1,7 @@
 import AuthNavbar from "../components/AuthNavbar";
 import { NavLink } from "react-router-dom";
 function Archives() {
-    let items = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+    let items = ["Monday",  "Wednesday",  "Friday"];
 
     return (
         <div>
@@ -41,7 +41,9 @@ function Archives() {
                         </h1>
                         <NavLink to="/PastArchives">
                             <button className="text-xl rounded-lg bg-yellow-400 font-color px-5 py-2 mr-5 hover:text-white hover:bg-blue-300 mt-5">
+                                <a href="https://drive.google.com/drive/folders/1Gflp-6zJkl6kCRY759teXkZ5moKPd-3T?usp=drive_link">
                                 Explore
+                                </a>
                             </button>
                         </NavLink>
                     </div>
