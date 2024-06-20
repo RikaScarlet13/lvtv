@@ -177,14 +177,14 @@ const OurStory = () => {
                         </div>
                     </div>
 
-                    <div className="flex justify-center mx-auto px-4 flex-row space-x-4 items-start py-12">
+                    <div className="flex justify-center mx-auto px-4 flex-row space-x-4 items-start py-24">
                         <div className="flex justify-center flex-col">
                             <h1 className="text-2xl font-bold font-color text-center">
                                 Development Team
                             </h1>
                             <br />
                             <div className="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
-                                <div className="flex flex-col items-center space-y-4 p-2">
+                                <div className="flex flex-col items-center space-y-4 space-x-6 p-2">
                                     <img
                                         src={khai}
                                         className="devteam-image-size object-cover rounded-sm shadow hover:shadow-lg border border-gray-300"
@@ -194,7 +194,7 @@ const OurStory = () => {
                                         Khaihou James D. Law
                                     </h1>
                                 </div>
-                                <div className="flex flex-col items-center space-y-4 p-2">
+                                <div className="flex flex-col items-center space-y-4 space-x-6 p-2">
                                     <img
                                         src={hanzel}
                                         className="devteam-image-size object-cover rounded-sm shadow hover:shadow-lg border border-gray-300"
@@ -204,7 +204,7 @@ const OurStory = () => {
                                         Rommel Hanzel D. Navarro
                                     </h1>
                                 </div>
-                                <div className="flex flex-col items-center space-y-4 p-2">
+                                <div className="flex flex-col items-center space-y-4 space-x-6 p-2">
                                     <img
                                         src={rika}
                                         className="devteam-image-size object-cover rounded-sm shadow hover:shadow-lg border border-gray-300"
@@ -214,7 +214,7 @@ const OurStory = () => {
                                         Erika Mae Camille C. Corpuz
                                     </h1>
                                 </div>
-                                <div className="flex flex-col items-center space-y-4 p-2">
+                                <div className="flex flex-col items-center space-y-4 space-x-6 p-2">
                                     <img
                                         src={tim}
                                         className="devteam-image-size object-cover rounded-sm shadow hover:shadow-lg border border-gray-300"
@@ -224,7 +224,7 @@ const OurStory = () => {
                                         Timothy Carl I. Bundalian
                                     </h1>
                                 </div>
-                                <div className="flex flex-col items-center space-y-4 p-2">
+                                <div className="flex flex-col items-center space-y-4 space-x-6 p-2">
                                     <img
                                         src={joshua}
                                         className="devteam-image-size object-cover rounded-sm shadow hover:shadow-lg border border-gray-300"

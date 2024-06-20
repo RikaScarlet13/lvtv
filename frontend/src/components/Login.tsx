@@ -31,7 +31,7 @@ const Login = () => {
 
   return (
     <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID!}>
-      <div className="flex items-center justify-center h-screen bg-gray-100">
+      <div className="flex items-center justify-center bg-gray-100">
         {errorMessage && <div className="error-message">{errorMessage}</div>}
         <GoogleLogin
           onSuccess={handleSuccess}

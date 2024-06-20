@@ -1,3 +1,4 @@
+import PrivacyPolicy from "../pages/PrivacyPolicy";
 const Footer = () => {
     return (
         <footer>

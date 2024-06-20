@@ -1,6 +1,8 @@
+import AuthNav from '../../components/AuthNavbar';
 const Bab = () => {
     return (
         <div>
+            <AuthNav />
             {/* Add your other components and content here */}
             <div className="divide-y-8 px-10 m-10 divide-yellow-400">
                 <div className="m-10">

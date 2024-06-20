@@ -123,7 +123,7 @@ const Header = () => {
               <div>
                 <button
                   type="button"
-                  className="inline-flex gap-x-1.5 rounded-md  text-xl shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                  className="inline-flex gap-x-1.5 rounded-md  text-xl shadow-sm ring-inset ring-gray-300 hover:text-white"
                   id="menu-button"
                   aria-expanded="true"
                   aria-haspopup="true"
@@ -220,7 +220,7 @@ const Header = () => {
               <div>
                 <button
                   type="button"
-                  className="inline-flex gap-x-1.5 rounded-md  text-xl shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                  className="inline-flex gap-x-1.5 rounded-md  text-xl shadow-sm ring-inset ring-gray-300 hover:text-white"
                   id="menu-button"
                   aria-expanded="true"
                   aria-haspopup="true"

@@ -42,7 +42,10 @@ const Header = () => {
           <img src={logo} alt="Logo" className="h-20 spacing" />
         </div>
         <div>
-          <button
+          <button className="p-10">
+            <LogIn />
+          </button>
+          {/* <button
             className="text-xl rounded-lg bg-yellow-400 font-color px-5 py-2 mr-5 hover:text-white hover:bg-blue-300"
             onClick={handleLoginButtonClick}
           >
@@ -50,7 +53,7 @@ const Header = () => {
           </button>
           <button className="text-xl rounded-lg bg-yellow-400 font-color px-5 py-2 mr-10 hover:text-white hover:bg-blue-300">
             Watch Live
-          </button>
+          </button> */}
         </div>
       </nav>
       <div className="w-full bg-yellow-400 font-color px-10">
@@ -61,16 +64,16 @@ const Header = () => {
                 Home
               </NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink className="text-xl hover:text-white" to="/TeleRadio">
                 TeleRadio
               </NavLink>
-            </li>
+            </li> */}
             <div className="relative inline-block text-left">
               <div>
                 <button
                   type="button"
-                  className="inline-flex gap-x-1.5 rounded-md  text-xl shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                  className="inline-flex gap-x-1.5 rounded-md  text-xl ring-inset ring-gray-300 hover:text-white"
                   id="menu-button"
                   aria-expanded="true"
                   aria-haspopup="true"
@@ -175,7 +178,7 @@ const Header = () => {
               </NavLink>
             </li>
             <div className="relative inline-block text-left">
-              <div>
+              {/* <div>
                 <button
                   type="button"
                   className="inline-flex gap-x-1.5 rounded-md  text-xl shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
@@ -201,7 +204,7 @@ const Header = () => {
                     />
                   </svg>
                 </button>
-              </div>
+              </div> */}
 
               {/* <!--
                 Dropdown menu, show/hide based on menu state.
@@ -235,7 +238,7 @@ const Header = () => {
                       </a>
                     </NavLink>
                   </div>
-                  <div className="py-1" role="none">
+                  {/* <div className="py-1" role="none">
                     <NavLink to="/PastArchives">
                       <a
                         href="#"
@@ -247,7 +250,7 @@ const Header = () => {
                         Past Archives
                       </a>
                     </NavLink>
-                  </div>
+                  </div> */}
                 </div>
               )}
             </div>
