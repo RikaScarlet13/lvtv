@@ -13,6 +13,7 @@ import LoginPage from "./pages/LoginPage";
 import Navbar from "./components/Navbar";
 import AdminLoginPage from "./pages/admin/LoginPage";
 import Header from "./components/admin/Header";
+import Footer from "./components/Footer";
 import Archives from "./pages/Archives";
 import OurStory from "./pages/OurStory";
 import Teleradio from "./pages/Teleradio";
@@ -31,43 +32,47 @@ const App = () => {
 
     // const isAdminRoute = location.pathname.startsWith("/admin"); // Step 2: Check if it's an admin route
     return (
-        <Router>
-            {/* <Navbar /> */}
-            {/* {!isAdminRoute && <Navbar />} */}
-            <Routes>
-                <Route path="/" element={<LandingPage />} />
-                {/* <Route path="/login" element={<LoginPage />} /> */}
-                <Route path="/admin/login" element={<AdminLoginPage />} />
+        <div>
+            <Router>
+                {/* <Navbar /> */}
+                {/* {!isAdminRoute && <Navbar />} */}
+                <Routes>
+                    <Route path="/" element={<LandingPage />} />
+                    {/* <Route path="/login" element={<LoginPage />} /> */}
+                    <Route path="/admin/login" element={<AdminLoginPage />} />
 
-                <Route path="/Archives" element={<Archives />} />
-                <Route path="/HomePage" element={<HomePage />} />
-                <Route path="/OurStory" element={<OurStory />} />
-                <Route path="/Teleradio" element={<Teleradio />} />
-                <Route path="courses/Bab" element={<Bab />} />
-                <Route path="courses/BsaBsais" element={<BsaBsais />} />
-                <Route path="courses/BsisAct" element={<BsisAct />} />
-                <Route path="courses/Bssw" element={<Bssw />} />
+                    <Route path="/Archives" element={<Archives />} />
+                    <Route path="/HomePage" element={<HomePage />} />
+                    <Route path="/OurStory" element={<OurStory />} />
+                    <Route path="/Teleradio" element={<Teleradio />} />
+                    <Route path="courses/Bab" element={<Bab />} />
+                    <Route path="courses/BsaBsais" element={<BsaBsais />} />
+                    <Route path="courses/BsisAct" element={<BsisAct />} />
+                    <Route path="courses/Bssw" element={<Bssw />} />
 
-                {/* MOVE TO PROTECTED ROUTES */}
+                    {/* MOVE TO PROTECTED ROUTES */}
 
-                <Route path="/home" element={<HomePage />} />
-                <Route path="/admin/dashboard" element={<Dashboard />} />
-                <Route path="/home" element={<HomePage />} />
-                <Route path="/admin/dashboard" element={<Dashboard />} />
-                {/* <Route path="/admin/dashboard" element={<Header />} /> */}
+                    <Route path="/home" element={<HomePage />} />
+                    <Route path="/admin/dashboard" element={<Dashboard />} />
+                    <Route path="/home" element={<HomePage />} />
+                    <Route path="/admin/dashboard" element={<Dashboard />} />
+                    {/* <Route path="/admin/dashboard" element={<Header />} /> */}
 
-                {/* END MOVE TO PROTECTED ROUTES */}
-                <Route
-                    path="/app"
-                    element={
-                        <AuthProvider>
-                            <ProtectedRoutes />
-                        </AuthProvider>
-                    }
-                />
-                {/* <Route path="/admin/login" element={<AdminLoginPage />} /> */}
-            </Routes>
-        </Router>
+                    {/* END MOVE TO PROTECTED ROUTES */}
+                    <Route
+                        path="/app"
+                        element={
+                            <AuthProvider>
+                                <ProtectedRoutes />
+                            </AuthProvider>
+                        }
+                    />
+                    {/* <Route path="/admin/login" element={<AdminLoginPage />} /> */}
+                </Routes>
+            </Router>
+            <Footer />
+        </div>
+        
     );
 };
 
