@@ -27,6 +27,7 @@ import {
   import Bssw from "./pages/courses/Bssw";
   import PrivacyPolicy from "./components/PrivacyPolicy";
   import FAQs from "./pages/FAQs";
+  import TermsOfUse from "./pages/TermsOfUse";
   
   // const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   //   const { isAuthenticated } = useAuth();
@@ -58,6 +59,7 @@ import {
             <Route path="courses/Bssw" element={<Bssw />} />
             <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
             <Route path="/FAQs" element={<FAQs />} />
+            <Route path="/TermsOfUse" element={<TermsOfUse />} />
   
             {/* MOVE TO PROTECTED ROUTES */}
   
