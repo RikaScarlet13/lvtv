@@ -1,4 +1,5 @@
 import AuthNavbar from "../components/AuthNavbar";
+import { NavLink } from "react-router-dom";
 function Archives() {
     let items = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
@@ -33,14 +34,16 @@ function Archives() {
                             }
                         </div>
                     </div>
-                    <div className="flex flex-col items-center pt-96">
+                    <div className="flex flex-col items-center pt-6">
                         <div style={{ height: '30vh'}}></div>
                         <h1 className="font-color text-2xl font-bold justify-center flex">
                             Explore Past Archives
                         </h1>
-                        <button className="text-xl rounded-lg bg-yellow-400 font-color px-5 py-2 mr-5 hover:text-white hover:bg-blue-300 mt-5">
-                            Explore
-                        </button>
+                        <NavLink to="/PastArchives">
+                            <button className="text-xl rounded-lg bg-yellow-400 font-color px-5 py-2 mr-5 hover:text-white hover:bg-blue-300 mt-5">
+                                Explore
+                            </button>
+                        </NavLink>
                     </div>
                 </div>
             </div>

@@ -3,6 +3,13 @@ import { useAuth } from "../context/AuthContext";
 import Navbar from "../components/Navbar";
 import React from "react";
 import heroImage from "../assets/heroimage.jpg";
+import foundationbanner from "../assets/foundation week banner.jpg";
+import zoomustahan from "../assets/zoomustahan.png";
+import img8 from "../assets/programs/program8.jpg";
+import img6 from "../assets/programs/program6.jpg";
+import img5 from "../assets/programs/program5.jpg";
+import img3 from "../assets/programs/program3.jpg";
+import img1 from "../assets/programs/program1.jpg";
 import AuthNavbar from "../components/AuthNavbar";
 
 function HomePage() {
@@ -27,7 +34,7 @@ function HomePage() {
               <img
                 className="flex rounded-sm w-full bg-white shadow hover:shadow-lg object-cover"
                 src={heroImage}
-                alt="Descriptive text"
+                alt="Hero Image"
               />
             </div>
           </div>
@@ -54,21 +61,49 @@ function HomePage() {
             <div className="flex justify-center items-center flex-col space-y-4 md:px-4 w-full">
               <h1 className="text-2xl myFont py-6">Schedules & Programs</h1>
               <br />
-              <div className="flex rounded-sm lg:w-96 min-w-52 w-full h-16 bg-white shadow p-10 hover:shadow-lg">
-                <h1 className="text-black">Sample</h1>
+              <div className="mx-10 flex rounded-sm w-96 h-40 m-10 bg-white shadow hover:shadow-lg">
+                <div className="w-40 h-40">
+                  <img src={img8} alt="program 8" className="object-contain max-w-full max-h-full"/>
+                </div>
+                <div>
+                  <h1 className="text-xl font-bold">INTRAMURALS</h1>
+                  <article>Synergized La Verdarians:<br/> Embracing Excellence Through<br/> Sports and Good Works</article>
+                  <br/>
+                  <p className="font-bold">December 8-10</p>
+                </div>
               </div>
-              <div className="flex rounded-sm lg:w-96  min-w-52 w-full h-24 bg-white shadow p-10 hover:shadow-lg">
-                <h1 className="text-black">Sample</h1>
+              <div className="mx-10 flex rounded-sm w-96 h-40 m-10 bg-white shadow hover:shadow-lg">
+                <div className="w-40 h-40">
+                  <img src={img6} alt="program 6" className="object-contain max-w-full max-h-full"/>
+                </div>
+                <div>
+                  <h1 className="text-xl font-bold">Mr & Ms Commweek</h1>
+                  <article>#PromotingFilipinoValues<br/>AndCulture</article>
+                  <br/>
+                  <p className="font-bold">January 12-14</p>
+                </div>
               </div>
-              <div className="flex rounded-sm lg:w-96  min-w-52 w-full h-24 bg-white shadow p-10 hover:shadow-lg">
-                <h1 className="text-black">Sample</h1>
+              <div className="mx-10 flex rounded-sm w-96 h-40 m-10 bg-white shadow hover:shadow-lg">
+                <div className="w-40 h-40">
+                  <img src={img3} alt="program 3" className="object-contain max-w-full max-h-full"/>
+                </div>
+                <div>
+                  <h1 className="text-xl font-bold">FIESTANGHALIAN</h1>
+                  <article>Makisaya sa nagiisang<br/> Fiesta ng Sambayanan</article>
+                  <br/>
+                  <p className="font-bold">January 10</p>
+                </div>
               </div>
             </div>
             <div className="mx-auto flex justify-center flex-col space-y-4 w-full relative">
               <h1 className="text-2xl">Recent Programs</h1>
               <br />
-              <div className="flex rounded-sm md:w-96 w-full h-24 bg-white shadow hover:shadow-lg"></div>
-              <div className="flex rounded-sm md:w-96 w-full h-24 bg-white shadow hover:shadow-lg"></div>
+              <div className="mx-10 flex rounded-sm w-96 h-40 m-10 bg-white shadow hover:shadow-lg">
+                <img src={img5} alt="program 5"/>
+              </div>
+              <div className="mx-10 flex rounded-sm w-96 h-40 m-10 bg-white shadow hover:shadow-lg">
+                <img src={img1} alt="program 1" className="object-contain"/>
+              </div>
             </div>
           </div>
           <div className="flex justify-center mx-auto flex-col mt-10 ">
@@ -81,8 +116,14 @@ function HomePage() {
               </div>
             </div>
             <div className="space-y-4 py-5">
-              <div className="mx-auto flex rounded-sm w-5/6 h-80 bg-white shadow p-20 hover:shadow-lg"></div>
-              <div className="mx-auto flex rounded-sm w-5/6 h-80 bg-white shadow p-20 hover:shadow-lg"></div>
+              <div className="mx-auto flex rounded-sm w-5/6 h-full bg-white shadow hover:shadow-lg">
+                <img className="flex rounded-sm w-full bg-white shadow hover:shadow-lg object-cover" 
+                src={foundationbanner}/>
+              </div>
+              <div className="mx-auto flex rounded-sm w-5/6 h-auto bg-white shadow hover:shadow-lg">
+                <img className="flex rounded-sm w-full bg-white shadow hover:shadow-lg object-cover" 
+                src={zoomustahan}/>
+              </div>
             </div>
           </div>
           {/* <div className="p-20 flex justify-center flex-col">

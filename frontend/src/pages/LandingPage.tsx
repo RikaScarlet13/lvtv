@@ -1,4 +1,6 @@
 import heroImage from "../assets/heroimage.jpg";
+import foundationbanner from "../assets/foundation week banner.jpg";
+import zoomustahan from "../assets/zoomustahan.png";
 import Navbar from "../components/Navbar";
 
 function Home() {
@@ -83,8 +85,14 @@ function Home() {
                             </div>
                         </div>
                         <div className="space-y-4 py-5">
-                            <div className="mx-auto flex rounded-sm w-5/6 h-80 bg-white shadow p-20 hover:shadow-lg"></div>
-                            <div className="mx-auto flex rounded-sm w-5/6 h-80 bg-white shadow p-20 hover:shadow-lg"></div>
+                            <div className="mx-auto flex rounded-sm w-5/6 h-full bg-white shadow hover:shadow-lg">
+                                <img className="flex rounded-sm w-full bg-white shadow hover:shadow-lg object-cover" 
+                                src={foundationbanner}/>
+                            </div>
+                            <div className="mx-auto flex rounded-sm w-5/6 h-auto bg-white shadow hover:shadow-lg">
+                                <img className="flex rounded-sm w-full bg-white shadow hover:shadow-lg object-cover" 
+                                src={zoomustahan}/>
+                            </div>
                         </div>
                     </div>
                     {/* <div className="p-20 flex justify-center flex-col">

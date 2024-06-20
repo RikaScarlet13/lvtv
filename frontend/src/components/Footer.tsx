@@ -1,5 +1,12 @@
-import PrivacyPolicy from "../pages/PrivacyPolicy";
+import PrivacyPolicy from "./PrivacyPolicy";
+import FAQs from "../pages/FAQs";
+import { useState } from "react";
+
 const Footer = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const closeModal = () => setIsOpen(false);
+    const openModal = () => setIsOpen(true);
     return (
         <footer>
             <div className="p-10 bg-yellow-400 text-black">
@@ -29,7 +36,32 @@ const Footer = () => {
                         <div className="mb-5">
                             <ul className="mt-5">
                                 <li className="pb-3"><a href="" className="hover:text-gray-400">Terms of Use</a></li>
-                                <li className="pb-3"><a href="/PrivacyPolicy" className="hover:text-gray-400">Privacy Policy</a></li>
+                                <li className="pb-3"><a className="hover:text-gray-400" onClick={openModal}>Privacy Policy</a>
+                                {isOpen && (
+                                    <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+                                        <div className="relative top-20 mx-auto p-5 border w-3/4 shadow-lg rounded-md bg-white">
+                                            <div className="mt-3 text-center">
+                                                <h3 className="text-lg leading-6 font-medium text-gray-900">Privacy Policy</h3>
+                                                <div className="mt-2 px-7 py-3">
+                                                    <p className="text-sm text-gray-500">
+                                                    In compliance with data privacy laws such as, but not limited to, Republic Act No. 10173<br/>  (Philippine Data Privacy Act of 2012) and its implementing rules and regulations, we within<br/>  the Organization of La Verdad Christian College (LVCC), collect and process your personal<br/>  information in this Survey (LVTV: A Live Streaming Platform for Bachelor of Arts<br/>  Broadcasting Program of La Verdad Christian College - Apalit) for Capstone Project<br/>  purposes only, keeping them securely and with confidentiality using our organizational,<br/>  technical, and physical security measures, and retain them in accordance with our retention<br/>  policy. We don’t share them to any external group without your consent, unless otherwise<br/>  stated in our privacy notice. You have the right to be informed, to object, to access,<br/>  to rectify, to erase or to block the processing of your personal information, as well as your<br/>  right to data portability, to file a complaint and be entitled to damages for violation of your<br/>  rights under this data privacy.<br/><br/>  
+                                                    For your data privacy inquiries, you may reach our Data Protection Officer through:<br/> 
+                                                    Email: dpo@laverdad.edu.ph
+                                                    </p>
+                                                </div>
+                                                <div className="items-center px-4 py-3">
+                                                    <button
+                                                        onClick={closeModal}
+                                                        className="px-4 py-2 bg-blue-500 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                                    >
+                                                        Close
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )}
+                                </li>
                                 <li className="pb-3"><a href="/FAQs" className="hover:text-gray-400">FAQs</a></li>
                             </ul>
                         </div>

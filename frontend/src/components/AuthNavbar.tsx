@@ -7,6 +7,11 @@ import { FaUserCircle } from "react-icons/fa";
 import logo from "../assets/logo.png";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const closeModal = () => setIsOpen(false);
+  const openModal = () => setIsOpen(true);
+
   const [isDropdown1Open, setIsDropdown1Open] = useState(false);
   const [isDropdown2Open, setIsDropdown2Open] = useState(false);
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
@@ -76,17 +81,38 @@ const Header = () => {
                 tabIndex={-1}
               >
                 <div className="py-1" role="none">
-                  <NavLink to="/Profile">
-                    <a
-                      href="#"
-                      className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                      role="menuitem"
-                      tabIndex={-1}
-                      id="profile-menu-item-0"
-                    >
-                      Profile
-                    </a>
-                  </NavLink>
+                  <a
+                    href="#"
+                    className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                    role="menuitem"
+                    tabIndex={-1}
+                    id="profile-menu-item-0"
+                    onClick={openModal}
+                  >
+                    Profile
+                  </a>
+                  {isOpen && (
+                      <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+                          <div className="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+                              <div className="mt-3 text-center">
+                                  <h3 className="text-lg leading-6 font-medium text-gray-900">Profile</h3>
+                                  <div className="mt-2 px-7 py-3">
+                                      <p className="text-sm text-gray-500">
+                                          Profile details or content goes here. Adjust the size, padding, or margins as needed.
+                                      </p>
+                                  </div>
+                                  <div className="items-center px-4 py-3">
+                                      <button
+                                          onClick={closeModal}
+                                          className="px-4 py-2 bg-blue-500 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                      >
+                                          Close
+                                      </button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  )}
                 </div>
                 <div className="py-1" role="none">
                   <a
@@ -267,7 +293,7 @@ const Header = () => {
                     </NavLink>
                   </div>
                   <div className="py-1" role="none">
-                    <NavLink to="/Archives">
+                    <NavLink to="/PastArchives">
                       <a
                         href="#"
                         className="text-gray-700 block px-4 py-2 text-sm"
