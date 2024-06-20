@@ -15,24 +15,24 @@ const Header = () => {
     setIsDropdown2Open(false);
   }, [location]);
 
-  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  // const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
-  const handleLoginButtonClick = () => {
-    setIsLoginModalOpen((prevState) => !prevState); // Toggles the modal state
-  };
+  // const handleLoginButtonClick = () => {
+  //   setIsLoginModalOpen((prevState) => !prevState); // Toggles the modal state
+  // };
 
-  const handleCloseLoginModal = () => {
-    setIsLoginModalOpen(false);
-  };
+  // const handleCloseLoginModal = () => {
+  //   setIsLoginModalOpen(false);
+  // };
 
-  const handleSignOut = () => {
-    window.google.accounts.id.disableAutoSelect();
-    window.google.accounts.id.prompt();
-    window.location.href = "https://accounts.google.com/logout";
-    window.google.accounts.id.revoke(() => {
-      console.log("User signed out.");
-    });
-  };
+  // const handleSignOut = () => {
+  //   window.google.accounts.id.disableAutoSelect();
+  //   window.google.accounts.id.prompt();
+  //   window.location.href = "https://accounts.google.com/logout";
+  //   window.google.accounts.id.revoke(() => {
+  //     console.log("User signed out.");
+  //   });
+  // };
 
   return (
     <header className="bg-header">

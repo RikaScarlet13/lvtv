@@ -1,18 +1,21 @@
-import React from "react";
+// import React from "react";
 import {
   BrowserRouter as Router,
   Route,
   Routes,
-  useLocation,
+  // useLocation,
 } from "react-router-dom";
-import { AuthProvider, useAuth } from "./context/AuthContext";
+import {
+  AuthProvider,
+  // useAuth
+} from "./context/AuthContext";
 import LandingPage from "./pages/LandingPage";
 import HomePage from "./pages/Home";
 import Dashboard from "./pages/admin/Dashboard";
-import LoginPage from "./pages/LoginPage";
-import Navbar from "./components/Navbar";
+// import LoginPage from "./pages/LoginPage";
+// import Navbar from "./components/Navbar";
 import AdminLoginPage from "./pages/admin/LoginPage";
-import Header from "./components/admin/Header";
+// import Header from "./components/admin/Header";
 
 // const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
 //   const { isAuthenticated } = useAuth();

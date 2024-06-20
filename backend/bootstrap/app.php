@@ -12,6 +12,11 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
+
+         // Adding your web middleware group here
+         $middleware->group('web', [
+            // Your web middleware here
+        ]);
         // Adding your api middleware group here
         $middleware->group('api', [
             \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
@@ -22,6 +27,8 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->group('role', [
             \App\Http\Middleware\RoleMiddleware::class,
         ]);
+
+
         
     })
     ->withExceptions(function (Exceptions $exceptions) {
