@@ -1,8 +1,15 @@
-import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
+import { useState } from "react";
+import {
+  GoogleOAuthProvider,
+  GoogleLogin,
+  CredentialResponse,
+} from "@react-oauth/google";
 import axios from "axios";
 
 const Login = () => {
-  const handleSuccess = async (credentialResponse: any) => {
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  const handleSuccess = async (credentialResponse: CredentialResponse) => {
     const { credential } = credentialResponse;
     try {
       const res = await axios.post(
@@ -18,12 +25,19 @@ const Login = () => {
 
   const handleFailure = (error: any) => {
     console.error("Google login failed", error);
+    setErrorMessage("Failed to login with Google. Please try again.");
+    // Optionally, implement retry logic here or elsewhere in your component
   };
 
   return (
     <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID!}>
-      <div className="flex items-center justify-center  bg-gray-100">
-        <GoogleLogin onSuccess={handleSuccess} onError={handleFailure} />
+      <div className="flex items-center justify-center bg-gray-100">
+        {errorMessage && <div className="error-message">{errorMessage}</div>}
+        <GoogleLogin
+          onSuccess={handleSuccess}
+          onError={() => handleFailure(new Error("Google Login Failed"))}
+          useOneTap
+        />
       </div>
     </GoogleOAuthProvider>
   );

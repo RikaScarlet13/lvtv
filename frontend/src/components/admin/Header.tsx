@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const Header = () => {
   // State for handling sidebar and notification toggles
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [notificationOpen, setNotificationOpen] = useState(false);
+  // const [notificationOpen, setNotificationOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   // Toggle sidebar function
@@ -12,9 +12,9 @@ const Header = () => {
   };
 
   // Toggle notification function
-  const toggleNotification = () => {
-    setNotificationOpen(!notificationOpen);
-  };
+  // const toggleNotification = () => {
+  //   setNotificationOpen(!notificationOpen);
+  // };
 
   // Toggle dropdown function
   const toggleDropdown = () => {

@@ -19,24 +19,24 @@ const Header = () => {
         setIsProfileDropdownOpen(false);
     }, [location]);
 
-    const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+    // const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
-    const handleLoginButtonClick = () => {
-        setIsLoginModalOpen((prevState) => !prevState); // Toggles the modal state
-    };
+    // const handleLoginButtonClick = () => {
+    //   setIsLoginModalOpen((prevState) => !prevState); // Toggles the modal state
+    // };
 
-    const handleCloseLoginModal = () => {
-        setIsLoginModalOpen(false);
-    };
+    // const handleCloseLoginModal = () => {
+    //   setIsLoginModalOpen(false);
+    // };
 
-    const handleSignOut = () => {
-        window.google.accounts.id.disableAutoSelect();
-        window.google.accounts.id.prompt();
-        window.location.href = "https://accounts.google.com/logout";
-        window.google.accounts.id.revoke(() => {
-            console.log("User signed out.");
-        });
-    };
+    // const handleSignOut = () => {
+    //   window.google.accounts.id.disableAutoSelect();
+    //   window.google.accounts.id.prompt();
+    //   window.location.href = "https://accounts.google.com/logout";
+    //   window.google.accounts.id.revoke(() => {
+    //     console.log("User signed out.");
+    //   });
+    // };
 
     return (
         <header className="bg-header">
@@ -96,7 +96,7 @@ const Header = () => {
                                 <div className="py-1" role="none">
                                     <a
                                         href="#"
-                                        onClick={handleSignOut}
+                                        // onClick={handleSignOut}
                                         className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
                                         role="menuitem"
                                         tabIndex={-1}
@@ -134,7 +134,7 @@ const Header = () => {
                             <div>
                                 <button
                                     type="button"
-                                    className="inline-flex gap-x-1.5 rounded-md  text-xl shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                                    className="inline-flex gap-x-1.5 rounded-md  text-xl shadow-sm ring-inset ring-gray-300 hover:text-white"
                                     id="menu-button"
                                     aria-expanded="true"
                                     aria-haspopup="true"
@@ -168,7 +168,7 @@ const Header = () => {
                                     tabIndex={-1}
                                 >
                                     <div className="py-1" role="none">
-                                        <NavLink to="courses/Bab">
+                                        <NavLink to="/Bab">
                                             <a
                                                 href="#"
                                                 className="text-gray-700 block px-4 py-2 text-sm"
@@ -181,9 +181,9 @@ const Header = () => {
                                         </NavLink>
                                     </div>
                                     <div className="py-1" role="none">
-                                        <NavLink to="courses/BsisAct">
+                                        <NavLink to="/BsisAct">
                                             <a
-                                                href="#"
+                                                href="pages/BsisAct"
                                                 className="text-gray-700 block px-4 py-2 text-sm"
                                                 role="menuitem"
                                                 tabIndex={-1}
@@ -193,7 +193,7 @@ const Header = () => {
                                             </a>
                                         </NavLink>
                                     </div>
-                                    <div className="py-1" role="none">
+                                    {/* <div className="py-1" role="none">
                                         <NavLink to="courses/BsaBsais">
                                             <a
                                                 href="#"
@@ -218,7 +218,7 @@ const Header = () => {
                                                 BSSW
                                             </a>
                                         </NavLink>
-                                    </div>
+                                    </div> */}
                                 </div>
                             )}
                         </div>
@@ -234,7 +234,7 @@ const Header = () => {
                             <div>
                                 <button
                                     type="button"
-                                    className="inline-flex gap-x-1.5 rounded-md  text-xl shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                                    className="inline-flex gap-x-1.5 rounded-md  text-xl shadow-sm ring-inset ring-gray-300 hover:text-white"
                                     id="menu-button"
                                     aria-expanded="true"
                                     aria-haspopup="true"
