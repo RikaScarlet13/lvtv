@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import LogIn from "./Login";
+import logo from "../assets/logo.png";
 
 const Header = () => {
   const [isDropdown1Open, setIsDropdown1Open] = useState(false);
@@ -15,15 +16,15 @@ const Header = () => {
     setIsDropdown2Open(false);
   }, [location]);
 
-  // const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
-  // const handleLoginButtonClick = () => {
-  //   setIsLoginModalOpen((prevState) => !prevState); // Toggles the modal state
-  // };
+  const handleLoginButtonClick = () => {
+    setIsLoginModalOpen((prevState) => !prevState); // Toggles the modal state
+  };
 
-  // const handleCloseLoginModal = () => {
-  //   setIsLoginModalOpen(false);
-  // };
+  const handleCloseLoginModal = () => {
+    setIsLoginModalOpen(false);
+  };
 
   // const handleSignOut = () => {
   //   window.google.accounts.id.disableAutoSelect();
@@ -37,32 +38,35 @@ const Header = () => {
   return (
     <header className="bg-header">
       <nav className="flex justify-between items-center 2-[92%] mx-auto">
-        <div>
-          <h1 className="text-white text-4xl font-bold p-8">LVTV</h1>
+        <div className="space-y-4 p-2 pl-4">
+          <img src={logo} alt="Logo" className="h-20 spacing" />
         </div>
         <div>
-          <button className="p-10">
-            <LogIn />
+          <button
+            className="text-xl rounded-lg bg-yellow-400 font-color px-5 py-2 mr-5 hover:text-white hover:bg-blue-300"
+            onClick={handleLoginButtonClick}
+          >
+            Log In
           </button>
-          {/* <button className="text-xl rounded-lg bg-yellow-400 font-color px-5 py-2 mr-10 hover:text-white hover:bg-blue-300">
+          <button className="text-xl rounded-lg bg-yellow-400 font-color px-5 py-2 mr-10 hover:text-white hover:bg-blue-300">
             Watch Live
-          </button> */}
+          </button>
         </div>
       </nav>
       <div className="w-full bg-yellow-400 font-color px-10">
-        <div className="flex justify-center">
-          <ul className="flex items-center justify-center space-x-[5vw] text-center my-2">
+        <div className="flex justify-center items-center">
+          <ul className="flex text-center gap-[4vw] my-2">
             <li>
               <NavLink className="text-xl hover:text-white" to="/Home">
                 Home
               </NavLink>
             </li>
             <li>
-              {/* <NavLink className="text-xl hover:text-white" to="/TeleRadio">
+              <NavLink className="text-xl hover:text-white" to="/TeleRadio">
                 TeleRadio
-              </NavLink> */}
+              </NavLink>
             </li>
-            <div className="relative inline-block ">
+            <div className="relative inline-block text-left">
               <div>
                 <button
                   type="button"
@@ -171,7 +175,7 @@ const Header = () => {
               </NavLink>
             </li>
             <div className="relative inline-block text-left">
-              {/* <div>
+              <div>
                 <button
                   type="button"
                   className="inline-flex gap-x-1.5 rounded-md  text-xl shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
@@ -197,7 +201,7 @@ const Header = () => {
                     />
                   </svg>
                 </button>
-              </div> */}
+              </div>
 
               {/* <!--
                 Dropdown menu, show/hide based on menu state.
@@ -232,7 +236,7 @@ const Header = () => {
                     </NavLink>
                   </div>
                   <div className="py-1" role="none">
-                    <NavLink to="/Archives">
+                    <NavLink to="/PastArchives">
                       <a
                         href="#"
                         className="text-gray-700 block px-4 py-2 text-sm"
@@ -247,14 +251,15 @@ const Header = () => {
                 </div>
               )}
             </div>
-            <li>
-              {/* <NavLink className="text-xl hover:text-white" to="/Profile">
-                Profile
-              </NavLink> */}
-            </li>
           </ul>
         </div>
       </div>
+      {isLoginModalOpen && (
+        <LogIn
+        // isOpen={isLoginModalOpen}
+        // onClose={handleCloseLoginModal}
+        />
+      )}
     </header>
   );
 };
