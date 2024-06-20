@@ -57,7 +57,7 @@ function HomePage() {
               </p>
             </div>
           </div>
-          <div className="flex justify-center items-centermx-auto md:flex-row flex-col gap-10">
+          <div className="flex justify-center items-center mx-auto md:flex-row flex-col gap-10">
             <div className="flex justify-center items-center flex-col space-y-4 md:px-4 w-full">
               <h1 className="text-2xl myFont py-6">Schedules & Programs</h1>
               <br />

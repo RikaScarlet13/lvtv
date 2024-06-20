@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import LogIn from "./Login";
 import { FaUserCircle } from "react-icons/fa";
 import logo from "../assets/logo.png";
+import profilepic from "../assets/profile-pic.jpg";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -93,18 +94,29 @@ const Header = () => {
                   </a>
                   {isOpen && (
                       <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
-                          <div className="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+                          <div className="relative top-20 mx-auto p-5 border w-2/5 shadow-lg rounded-md bg-white">
                               <div className="mt-3 text-center">
                                   <h3 className="text-lg leading-6 font-medium text-gray-900">Profile</h3>
-                                  <div className="mt-2 px-7 py-3">
-                                      <p className="text-sm text-gray-500">
-                                          Profile details or content goes here. Adjust the size, padding, or margins as needed.
+                                  <div className="flex flex-row mt-2 px-7 py-3">
+                                    <div>
+                                      <img src={profilepic} className="h-70 w-70"/>
+                                    </div>
+                                    <div className="p-10">
+                                      <p className="text-2xl text-gray-500 m-5">
+                                          First Name
                                       </p>
+                                      <p className="text-2xl text-gray-500 m-5">
+                                          Last Name
+                                      </p>
+                                      <p className="text-2xl text-gray-500 m-5">
+                                          Email
+                                      </p>
+                                    </div>
                                   </div>
                                   <div className="items-center px-4 py-3">
                                       <button
                                           onClick={closeModal}
-                                          className="px-4 py-2 bg-blue-500 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                          className="px-4 py-2 bg-blue-500 text-white text-base font-medium rounded-md w-1/4 shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                       >
                                           Close
                                       </button>
