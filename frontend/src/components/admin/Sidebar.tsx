@@ -50,7 +50,7 @@ const AdminSidebar: React.FC = () => {
         {/* Navigation Links */}
         <nav className="mt-10">
           <a
-            href="/"
+            href="/admin/dashboard"
             className="flex items-center px-6 py-2 mt-4 text-gray-100 bg-gray-700 bg-opacity-25"
           >
             <svg
@@ -78,7 +78,7 @@ const AdminSidebar: React.FC = () => {
           </a>
 
           <a
-            href="/users"
+            href="/admin/users"
             className="flex items-center px-6 py-2 mt-4 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
           >
             <svg
