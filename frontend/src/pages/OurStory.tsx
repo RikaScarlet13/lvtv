@@ -37,7 +37,7 @@ const OurStory = () => {
                         </div>
                         <div className="h-20 bg-yellow border-l-2 border-yellow"></div>
                     </div>
-                    <div className="flex justify-start mx-auto  p-10 px-0 md:flex-row flex-col container gap-10">
+                    <div className="flex justify-start mx-auto p-10 py-20 px-0 md:flex-row flex-col container gap-10">
                         <div className="mx-auto flex justify-start item-start flex-col space-y-1">
                             <h1 className="text-2xl font-color font-bold mb-6">
                                 History
@@ -106,7 +106,7 @@ const OurStory = () => {
                         </div>
                     </div>
 
-                    <div className="flex justify-center mx-auto p-10 flex-row space-x-4 items-start md:flex-nowrap flex-wrap">
+                    <div className="flex justify-center mx-auto p-10 flex-row space-x-4 items-start md:flex-nowrap flex-wrap py-20">
                         <div className="flex justify-center flex-col">
                             <h1 className="text-2xl font-bold font-color text-center">
                                 Vision
